@@ -4,13 +4,18 @@
   "version": "3.2.0",
   "repository": "zenorocha/delegate",
   "license": "MIT",
-  "main": "src/delegate.js",
+  "main": "lib/delegate.js",
+  "module": "lib/delegate.mjs",
   "keywords": [
     "event",
     "delegate",
     "delegation"
   ],
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-strip": "^3.0.4",
+    "@rollup/plugin-swc": "^0.4.0",
     "browserify": "^13.1.0",
     "chai": "^3.5.0",
     "karma": "^1.3.0",
@@ -21,11 +26,13 @@
     "karma-sinon": "^1.0.4",
     "mocha": "^3.1.2",
     "phantomjs-polyfill": "0.0.2",
+    "rollup": "^4.28.1",
+    "rollup-plugin-serve": "^1.1.1",
     "simulant": "^0.2.2",
     "sinon": "^1.17.6"
   },
   "scripts": {
-    "build": "browserify src/delegate.js -s delegate -o dist/delegate.js",
+    "build": "rollup -c",
     "test": "karma start --single-run"
   }
 }
