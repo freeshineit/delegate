@@ -1,40 +1,25 @@
 {
-  "compilerOptions": {
-    "module": "esnext",
-    "target": "ES2015",
-    "lib": [
-      "ES5",
-      "ES6",
-      "dom",
-      "ES2015",
-      "ES2016",
-      "ES2017",
-      "dom.iterable",
-      "es2015.collection",
-      "esnext"
-    ],
-    "allowJs": true,
-    "jsx": "react-jsx",
-    "outDir": "dist",
-    "moduleResolution": "Node",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "composite": true,
-    "baseUrl": ".",
-    "rootDir": "."
-  },
-  "include": [
-    "src",
-    ".eslintrc.js",
-    ".prettier.js",
-    "commitlint.config.js"
-  ],
-  "exclude": ["node_modules", "dist", "coverage", "docs", "examples", "build"]
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es5",
+        "lib": ["es6", "dom", "es2016", "es2017"],
+        "sourceMap": true,
+        "allowJs": true,
+        "declaration": true,
+        "declarationDir": "dist/types",
+        "outDir": "dist",
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true
+    },
+    "include": ["src/**/*.ts", "__tests__"],
+    "exclude": ["node_modules", "dist", "coverage", "docs", "example"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

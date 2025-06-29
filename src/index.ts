@@ -16,10 +16,8 @@ export type DelegateArguments = [Element, string, string, DelegateCallback];
  */
 // prettier-ignore
 function _delegate(element: Element, selector: string, type: string, callback: DelegateCallback, useCapture?: boolean) {
-  const listenerFn = listener.apply(
-    this,
-    arguments as unknown as DelegateArguments,
-  );
+  // prettier-ignore
+  const listenerFn = listener.apply(this, arguments as unknown as DelegateArguments);
 
   element.addEventListener(type, listenerFn as (e: Event) => void, useCapture);
 
