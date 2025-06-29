@@ -1,0 +1,10 @@
+dist/
+build/
+docs/
+coverage/
+node_modules
+*.svg
+*.png
+*.jpeg
+src/**/*.scss
+assets/
