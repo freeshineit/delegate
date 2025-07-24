@@ -5,10 +5,9 @@ logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-pnpm-denug.log*
+pnpm-debug.log*
 lerna-debug.log*
 .dumi
-.Ds_Stroe
 .DS_Store
 .rollup.cache
 temp/
