@@ -90,7 +90,10 @@ function generateConfig(configs) {
                     swc: {
                         jsc: {
                             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-                            target: "es2015",
+                            target:
+                                entry.output[0].format === "umd"
+                                    ? "es5"
+                                    : "es2015",
                         },
                     },
                     include: ["./src/**/*.{ts,js,mjs,tsx,jsx}"],
