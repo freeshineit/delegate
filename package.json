@@ -32,12 +32,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0",
-    "@microsoft/api-documenter": "^7.26.29",
-    "@microsoft/api-extractor": "^7.52.8",
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@rollup/plugin-alias": "^5.1.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.3",
@@ -49,15 +47,17 @@
     "@swc/core": "^1.11.29",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.13",
-    "rollup": "^4.41.1",
-    "rollup-plugin-dts": "^6.2.1",
-    "rollup-plugin-serve": "^2.0.3",
     "eslint": "^8.57.1",
     "eslint-config-xx": "^1.10.1",
     "husky": "^9.1.6",
     "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
     "rimraf": "^5.0.5",
+    "rollup": "^4.41.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-serve": "^2.0.3",
+    "typedoc": "^0.28.7",
+    "typedoc-plugin-rename-defaults": "^0.7.3",
     "typescript": "5.3.3"
   }
 }
