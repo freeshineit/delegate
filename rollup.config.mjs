@@ -7,8 +7,9 @@ import serve from "rollup-plugin-serve";
 import { dts } from "rollup-plugin-dts";
 import eslint from "@rollup/plugin-eslint";
 import dayjs from "dayjs";
-import pkg from "./package.json" with { type: "json" };
+import fs from "fs";
 
+const pkg = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
 const isDev = process.env.NODE_ENV !== "production";
 
 /**
