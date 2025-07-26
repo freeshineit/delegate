@@ -8,10 +8,10 @@ export type DelegateArguments = [Element, string, string, DelegateCallback];
  * Delegates event to a selector.
  *
  * @param {Element} element
- * @param {String} selector
- * @param {String} type
+ * @param {string} selector
+ * @param {string} type
  * @param {Function} callback
- * @param {Boolean} useCapture
+ * @param {boolean} useCapture
  * @return {Object}
  */
 // prettier-ignore
@@ -35,11 +35,11 @@ function _delegate(element: Element, selector: string, type: string, callback: D
 /**
  * Delegates event to a selector.
  *
- * @param {Element|String|Array} [elements]
+ * @param {Element|string|Array} [elements]
  * @param {string | Element} selector
- * @param {String} type
+ * @param {string} type
  * @param {Function} callback
- * @param {Boolean} useCapture
+ * @param {boolean} useCapture
  * @return {Object}
  */
 // prettier-ignore
@@ -73,8 +73,8 @@ function delegate(elements: Element | string | Element[], selector: string, type
  * Finds closest match and invokes callback.
  *
  * @param {Element} element
- * @param {String} selector
- * @param {String} type
+ * @param {string} selector
+ * @param {string} type
  * @param {Function} callback
  * @return {Function}
  */

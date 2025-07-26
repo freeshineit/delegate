@@ -25,7 +25,7 @@ if (typeof Element !== "undefined" && !Element.prototype.matches) {
  *
  * @param {Element} element
  * @param {string} selector
- * @return {Function}
+ * @return {Element}
  */
 function closest(element: Element, selector: string) {
     while (element && element.nodeType !== DOCUMENT_NODE_TYPE) {
@@ -37,6 +37,20 @@ function closest(element: Element, selector: string) {
         }
         element = element.parentNode as Element;
     }
+    return null;
 }
 
-export default closest;
+/**
+ * Finds the closest parent that matches a selector.
+ *
+ * @param {Element} element
+ * @param {string} selector
+ * @return {Element}
+ */
+function closestNative(element: Element, selector: string) {
+    return element && element.closest(selector);
+}
+
+export default typeof Element.prototype.closest === "function"
+    ? closestNative
+    : closest;
