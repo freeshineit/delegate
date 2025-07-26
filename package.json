@@ -22,7 +22,8 @@
     "lint": "eslint --fix \"packages/*/src/*.{ts,tsx,js,jsx,mjs}\" \"common/*/src/*.{ts,tsx,js,jsx,mjs}\" \"config/*/src/*.{js,jsx,mjs,ts,tsx}\"",
     "fmt": "prettier --write \"./**/*.{ts,tsx,js,jsx,html,scss}\"",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs": "typedoc --tsconfig typedoc.config.cjs"
   },
   "browserslist": [
     "last 1 chrome versions"
@@ -31,6 +32,14 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeshineit/delegate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeshineit/delegate/issues"
+  },
+  "homepage": "https://github.com/freeshineit/delegate#readme",
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",

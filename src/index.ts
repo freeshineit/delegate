@@ -1,7 +1,17 @@
 import closest from "./closest";
 
+/**
+ * Delegate event
+ */
 export type DelegateEvent = Event & { delegateTarget: Element };
+/**
+ * Delegate callback
+ */
 export type DelegateCallback = (e: DelegateEvent) => void;
+
+/**
+ * Delegate arguments
+ */
 export type DelegateArguments = [Element, string, string, DelegateCallback];
 
 /**
@@ -41,6 +51,16 @@ function _delegate(element: Element, selector: string, type: string, callback: D
  * @param {Function} callback
  * @param {boolean} useCapture
  * @return {Object}
+ * @example
+ * ```ts
+ * const delegation = delegate(document.body, 'a', 'click', function (e) {})
+ * // destroy (removeEventListener)
+ * delegation.destroy();
+ *
+ * const delegation1 = delegate(".btn", "click", function (e) { console.log(e.delegateTarget)},false);
+ * // destroy (removeEventListener)
+ * delegation1.destroy();
+ * ```
  */
 // prettier-ignore
 function delegate(elements: Element | string | Element[], selector: string, type: string, callback: DelegateCallback, useCapture?: boolean) {

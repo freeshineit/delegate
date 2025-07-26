@@ -88,7 +88,7 @@ delegate(
 #### With a single base element (default or specified)
 
 ```js
-var delegation = delegate(
+const delegation = delegate(
     document.body,
     ".btn",
     "click",
@@ -106,7 +106,7 @@ delegation.destroy();
 Note: selectors are always treated as multiple elements, even if one or none are matched. `delegate()` will return an array.
 
 ```js
-var delegations = delegate(
+const delegations = delegate(
     ".container",
     ".btn",
     "click",
