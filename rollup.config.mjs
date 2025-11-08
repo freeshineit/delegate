@@ -49,7 +49,7 @@ function generateConfig(configs) {
                 {
                     file: "dist/index.js",
                     format: "cjs",
-                    exports: "named",
+                    // exports: "named",
                     sourcemap: isDev,
                     banner,
                 },
