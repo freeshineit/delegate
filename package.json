@@ -1,8 +1,8 @@
 {
   "name": "@skax/delegate",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Lightweight event delegation",
-  "main": "dist/index.js",
+  "main": "dist/delegate.js",
   "types": "dist/types/index.d.ts",
   "license": "MIT",
   "files": [

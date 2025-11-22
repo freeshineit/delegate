@@ -43,30 +43,6 @@ function generateConfig(configs) {
                 },
             ],
         },
-        {
-            input,
-            output: [
-                {
-                    file: "dist/index.js",
-                    format: "cjs",
-                    // exports: "named",
-                    sourcemap: isDev,
-                    banner,
-                },
-            ],
-        },
-        {
-            input,
-            output: [
-                {
-                    exports: "named",
-                    file: "dist/index.mjs",
-                    format: "esm",
-                    sourcemap: isDev,
-                    banner,
-                },
-            ],
-        },
     ].filter(Boolean);
 
     return [
@@ -91,10 +67,7 @@ function generateConfig(configs) {
                     swc: {
                         jsc: {
                             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-                            target:
-                                entry.output[0].format === "umd"
-                                    ? "es5"
-                                    : "es2015",
+                            target: "es5",
                         },
                     },
                     include: ["./src/**/*.{ts,js,mjs,tsx,jsx}"],
@@ -108,7 +81,7 @@ function generateConfig(configs) {
                 isDev && entry.output[0].format === "umd"
                     ? serve({
                           port: 3000,
-                          contentBase: ["demo", "dist"],
+                          contentBase: ["examples/with-base", "dist"],
                       })
                     : null,
                 ...[entry.plugins || []],
