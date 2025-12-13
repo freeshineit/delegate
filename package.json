@@ -1,6 +1,6 @@
 {
   "name": "@skax/delegate",
-  "version": "4.0.1",
+  "version": "4.0.2-beta.1",
   "description": "Lightweight event delegation",
   "main": "dist/delegate.js",
   "types": "dist/types/index.d.ts",
