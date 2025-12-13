@@ -40,7 +40,7 @@ jobs:
 
             - name: Check file versions
               run: |
-                  files="dist/index.js dist/index.mjs dist/index.umd.js package.json"
+                  files="dist/delegate.js package.json"
 
                   version=""
                   inconsistent=false
