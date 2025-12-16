@@ -1,6 +1,6 @@
 {
   "name": "@skax/delegate",
-  "version": "4.0.2-beta.1",
+  "version": "4.0.2",
   "description": "Lightweight event delegation",
   "main": "dist/delegate.js",
   "types": "dist/types/index.d.ts",
@@ -19,7 +19,6 @@
     "clean": "rimraf dist",
     "lint": "eslint --fix \"packages/*/src/*.{ts,tsx,js,jsx,mjs}\" \"common/*/src/*.{ts,tsx,js,jsx,mjs}\" \"config/*/src/*.{js,jsx,mjs,ts,tsx}\"",
     "fmt": "prettier --write \"./**/*.{ts,tsx,js,jsx,html,scss}\"",
-    "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
     "docs": "typedoc --tsconfig typedoc.config.cjs"
   },
